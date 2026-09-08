@@ -4,6 +4,29 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100    // default: 10
+
+/ {
+  behaviors {
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+      tap-ms = <20>;
+    };
+
+    scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+      tap-ms = <20>;
+    };
+
+  };
+};
+
+
+
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
@@ -15,6 +38,7 @@
                 &kp A &kp B &kp C &kp D
                 &kp E &kp F &kp G &kp H
             >;
+            sensor-bindings = <&scroll_left_right &scroll_up_down>;
         };
     };
 };
