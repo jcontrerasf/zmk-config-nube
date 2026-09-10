@@ -25,10 +25,10 @@
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         col-gpios
-          = <&gpio0  2 GPIO_ACTIVE_HIGH> //D
-          , <&gpio1  4 GPIO_ACTIVE_HIGH> //C
+          = <&gpio0 22 GPIO_ACTIVE_HIGH> //A
           , <&gpio0 24 GPIO_ACTIVE_HIGH> //B
-          , <&gpio0 22 GPIO_ACTIVE_HIGH> //A
+          , <&gpio1  4 GPIO_ACTIVE_HIGH> //C
+          , <&gpio0  2 GPIO_ACTIVE_HIGH> //D
           ;
 
         row-gpios
