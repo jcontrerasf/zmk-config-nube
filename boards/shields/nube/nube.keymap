@@ -92,7 +92,7 @@
 
             bindings = <
                 &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1    &trans
-                &soft_off     &trans          &trans          &studio_unlock
+                &soft_off     &kp A           &kp B           &studio_unlock
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
         };
